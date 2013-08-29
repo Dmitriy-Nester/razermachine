@@ -11,5 +11,7 @@ class RazerMachine
     RMPathMaster* PathMaster;
     void OpenSubModule(char[]);
     void OpenSubModueL(std::basic_istream<char>*);
+    public:
+    ~RazerMachine();
 };
 #endif
