@@ -5,6 +5,7 @@ using namespace std;
 
 RazerMachine::RazerMachine(char path[])
 {
+    this->PathMaster = new RMPathMaster(path);
     std::ifstream file(path);
     if(!file)
         printf("Error!!!\n");
@@ -14,7 +15,14 @@ RazerMachine::RazerMachine(char path[])
         while(!file.eof())
         {
             file>>foread;
-            cout<<foread<<endl;
+            if(foread=="openfile")
+            {
+                file>>foread;
+                const char *s_path = this->PathMaster->relativePath(const_cast<char*>(foread.c_str()));
+                cout<<"relative path="<<s_path<<endl;
+                std::ifstream internal(s_path);
+            }
+            //cout<<foread<<endl;
         }
     }
 }
