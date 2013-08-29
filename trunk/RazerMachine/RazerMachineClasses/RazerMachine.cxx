@@ -26,3 +26,8 @@ RazerMachine::RazerMachine(char path[])
         }
     }
 }
+
+RazerMachine::~RazerMachine()
+{
+    delete this->PathMaster;
+}

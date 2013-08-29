@@ -20,8 +20,6 @@ RMPathMaster::RMPathMaster(char path[])
         last*=!flag;
     }
     slash = buf - path;
-    const char *r = MainPath.c_str();
-    std::cout<<&r[slash]<<" slash at position = "<<slash<<std::endl;
 }
 
 const char* RMPathMaster::relativePath(char path[])
@@ -33,7 +31,6 @@ const char* RMPathMaster::relativePath(char path[])
        memcpy(value, MainPath.c_str(), slash+1);
        memcpy(&value[slash+1], path, strlen(path));
        paths.insert(std::pair<std::string,char*>(std::string(path), value));
-       std::cout<<value<<std::endl;
    }
    return  value;
 }
