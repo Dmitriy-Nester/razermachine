@@ -1,3 +1,4 @@
+openfile superfile.txt
 #SmartSVN meta properties
 #Tue May 07 08:56:15 EEST 2013
 last-check-version=1
