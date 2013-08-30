@@ -11,8 +11,12 @@
 
 int main(int argc, const char * argv[])
 {
+#ifndef _MSC_VER
     char path[]= "/Users/kseniiapodoliaka/Documents/cc/RazerMachine/RazerMachine/RazerMachine/testmachine.txt";
-    RazerMachine Machine(path);
+#else
+	char path[] = "../RazerMachine/testmachine.txt";
+#endif
+	RazerMachine Machine(path);
     return 0;
 }
 

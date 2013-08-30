@@ -29,7 +29,7 @@ const char* RMPathMaster::relativePath(char path[])
    {
        value = static_cast<char*>(malloc(slash+strlen(path)+1));
        memcpy(value, MainPath.c_str(), slash+1);
-       memcpy(&value[slash+1], path, strlen(path));
+       memcpy(&value[slash+1], path, strlen(path)+1);
        paths.insert(std::pair<std::string,char*>(std::string(path), value));
    }
    return  value;
