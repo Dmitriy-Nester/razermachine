@@ -191,6 +191,18 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="Projection"
+				>
+				<File
+					RelativePath="..\RazerMachine\RazerMachineClasses\Projections\RZInterface.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\RazerMachine\RazerMachineClasses\Projections\RZInterface.hpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
