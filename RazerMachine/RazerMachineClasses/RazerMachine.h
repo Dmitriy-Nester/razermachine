@@ -9,8 +9,8 @@ class RazerMachine
     //RazerMachine(char text[]);
     private:
     RMPathMaster* PathMaster;
-    void OpenSubModule(char[]);
-    void OpenSubModueL(std::basic_istream<char>*);
+    void OpenSubModule(const char[]);
+    void OpenSubModule(std::basic_istream<char>*);
     public:
     ~RazerMachine();
 };

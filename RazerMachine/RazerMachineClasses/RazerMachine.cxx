@@ -17,14 +17,28 @@ RazerMachine::RazerMachine(char path[])
             file>>foread;
             if(foread=="openfile")
             {
-                file>>foread;
-                const char *s_path = this->PathMaster->relativePath(const_cast<char*>(foread.c_str()));
-                cout<<"relative path="<<s_path<<endl;
-                std::ifstream internal(s_path);
+                 file>>foread;
+                 this->OpenSubModule(foread.c_str());
             }
             //cout<<foread<<endl;
         }
     }
+}
+
+void RazerMachine::OpenSubModule(const char path[])
+{
+    const char *s_path = this->PathMaster->relativePath(const_cast<char*>(path));
+    std::ifstream internal = std::ifstream(s_path);
+    this->OpenSubModule(&internal);
+}
+
+void RazerMachine::OpenSubModule(std::basic_istream<char>* hile)
+{
+    //hile->fill();
+    printf(">>>> result %s", !hile[0]?"ERROR":"SUCCESS");
+    string g;
+    hile[0]>>g;
+    cout<<g<<endl;
 }
 
 RazerMachine::~RazerMachine()
