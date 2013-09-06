@@ -11,6 +11,8 @@ class RazerMachine
     RMPathMaster* PathMaster;
     void OpenSubModule(const char[]);
     void OpenSubModule(std::basic_istream<char>*);
+    bool noError;
+    void readOtherStructure(std::string*, std::basic_istream<char>*);
     public:
     ~RazerMachine();
 };

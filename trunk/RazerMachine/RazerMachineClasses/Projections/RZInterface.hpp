@@ -9,6 +9,6 @@ class RZInterface
 	void addMethod(const char[]);
 	private:
 	std::string name;
-	std::vector<char*> methods;
+	std::vector<char*> methods, types;
 };
 #endif

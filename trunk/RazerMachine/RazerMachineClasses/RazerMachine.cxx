@@ -5,6 +5,7 @@ using namespace std;
 
 RazerMachine::RazerMachine(char path[])
 {
+    noError = 1;
     this->PathMaster = new RMPathMaster(path);
     std::ifstream file(path);
     if(!file)
@@ -12,7 +13,7 @@ RazerMachine::RazerMachine(char path[])
     else
     {
         string foread;
-        while(!file.eof())
+        while(!file.eof()&&noError)
         {
             file>>foread;
             if(foread=="openfile")
@@ -20,7 +21,8 @@ RazerMachine::RazerMachine(char path[])
                  file>>foread;
                  this->OpenSubModule(foread.c_str());
             }
-            //cout<<foread<<endl;
+            else
+                this->readOtherStructure(&foread, &file);
         }
     }
 }
@@ -35,10 +37,24 @@ void RazerMachine::OpenSubModule(const char path[])
 void RazerMachine::OpenSubModule(std::basic_istream<char>* hile)
 {
     //hile->fill();
-    printf(">>>> result %s", !hile[0]?"ERROR":"SUCCESS");
+    //printf(">>>> result %s", !hile[0]?"ERROR":"SUCCESS");
     string g;
     hile[0]>>g;
     cout<<g<<endl;
+}
+
+void RazerMachine::readOtherStructure(string* nowRead, basic_istream<char>* file)
+{
+    char v[64], b = 0;
+    unsigned short int i = 0;
+    while(b!='#'&&b!=' '&&b!=';'&&b!='\n'&&i!=63)
+    {
+        file[0]>>b;
+        v[i] = b;
+        i++;
+    }
+    v[i] = 0;
+    cout<<"_^_"<<v<<endl;
 }
 
 RazerMachine::~RazerMachine()
