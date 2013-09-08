@@ -45,18 +45,19 @@ void RazerMachine::OpenSubModule(std::basic_istream<char>* hile)
 
 void RazerMachine::readOtherStructure(string* nowRead, basic_istream<char>* file)
 {
-    char v[64];
-    unsigned char b = 0;
+    char v[64], b = 0;
     unsigned short int i = 0;
-    while(b!='#'&&b!=' '&&b!=';'&&b!='\n'&&i!=63)
-    {
-        file[0]>>b;
+    //while(b!='#'&&(b!=' '&&i>2)&&b!=';'&&b!='\n'&&i!=63)
+    do
+	{
+		file->read(&b,1);
         v[i] = b;
         i++;
-        printf("%c<>%i<>%i\n", b, int(b), int(i));
+        printf("%c<>%i<>%i<%i>\n", b, int(b), int(i), int(' '));
     }
+	while(b!='#'&&b!=' '&&b!=';'&&b!='\n'&&i!=63);
     v[i] = 0;
-    cout<<nowRead->c_str()<<' '<<v<<endl;
+    cout<<nowRead->c_str()<<'_'<<v<<endl;
 }
 
 RazerMachine::~RazerMachine()
