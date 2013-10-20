@@ -1,6 +1,6 @@
 openfile superfile.txt
 openfile ../e_superfile.txt
-#SmartSVN meta properties
-#Tue May 07 08:56:15 EEST 2013
-last-check-version=1
-last-check-time=1367906175192
+interface testface
+real orgazma();
+integer marazma();
+end
