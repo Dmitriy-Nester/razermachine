@@ -27,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A7A3713717D5E989003B9FB6 /* Projections */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Projections; path = RazerMachineClasses/Projections; sourceTree = "<group>"; };
 		A7D97D5617C7537E00AA516C /* RazerMachine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RazerMachine; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D97D5917C7537E00AA516C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A7D97D5B17C7537E00AA516C /* RazerMachine.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RazerMachine.1; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		A7D97D5817C7537E00AA516C /* RazerMachine */ = {
 			isa = PBXGroup;
 			children = (
+				A7A3713717D5E989003B9FB6 /* Projections */,
 				A7D97D6517C768C200AA516C /* RMPathMaster.cpp */,
 				A7D97D6317C75CCD00AA516C /* RazerMachine.cxx */,
 				A7D97D5917C7537E00AA516C /* main.cpp */,
@@ -224,6 +226,7 @@
 				A7D97D6117C7537E00AA516C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

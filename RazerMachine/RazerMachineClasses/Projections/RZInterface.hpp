@@ -10,5 +10,6 @@ class RZInterface
 	private:
 	std::string name;
 	std::vector<char*> methods, types;
+    std::vector<unsigned long> argumentssizes;
 };
 #endif
