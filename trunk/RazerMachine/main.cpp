@@ -12,7 +12,7 @@
 int main(int argc, const char * argv[])
 {
 #ifndef _MSC_VER
-    char path[]= "/Users/kseniiapodoliaka/Documents/cc/RazerMachine/RazerMachine/RazerMachine/testmachine.txt";
+    char path[]= "/Users/dmitriynester/hobby projects/RazerMachine/RazerMachine/testmachine.txt";
 #else
 	char path[] = "../RazerMachine/testmachine.txt";
 #endif

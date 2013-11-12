@@ -1,5 +1,11 @@
 openfile superfile.txt
 openfile ../e_superfile.txt
+
+interface markum
+real getFlag(integer);
+boolean isEnabled();
+end
+
 interface testface
 real orgazma();
 integer marazma();
